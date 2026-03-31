@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery | Icely + Friends — Hampton Roads Events</title>
+<meta name="description" content="See Icely + Friends in action — photos from birthday parties, school fundraisers, community events, block parties, and more across Hampton Roads, VA.">
+<meta name="keywords" content="Icely and Friends photos, water ice events, Hampton Roads gallery, community events, birthday party photos, school event photos">
+<meta name="author" content="Icely + Friends">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://icelyandfriends.com/gallery">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Photo Gallery | Icely + Friends">
+<meta property="og:description" content="Frozen moments & real joy — see us serving smiles across Hampton Roads, VA.">
+<meta property="og:image" content="https://icelyandfriends.com/wp-content/uploads/2024/02/01.jpg">
+<meta property="og:url" content="https://icelyandfriends.com/gallery">
+<meta property="og:site_name" content="Icely + Friends">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Photo Gallery | Icely + Friends">
+<meta name="twitter:description" content="See us in action across Hampton Roads events.">
+<meta name="twitter:image" content="https://icelyandfriends.com/wp-content/uploads/2024/02/01.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="apple-touch-icon" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+.gallery-page{background:linear-gradient(180deg,var(--coconut) 0%,#E8F8F9 100%)}
+.gallery-masonry{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:16px}
+@media(max-width:800px){.gallery-masonry{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}}
+@media(max-width:480px){.gallery-masonry{grid-template-columns:1fr;grid-auto-rows:220px}}
+.gallery-item{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#e0e0e0}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gallery-item:hover img{transform:scale(1.07)}
+.gallery-item .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 60%);opacity:0;transition:opacity .35s;display:flex;align-items:flex-end;padding:20px}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-item .gallery-caption{color:#fff;font-size:.9rem;font-weight:500}
+.gallery-item.tall{grid-row:span 2}
+.gallery-item.wide{grid-column:span 2}
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox-img-wrap{position:relative;max-width:90vw;max-height:88vh}
+.lightbox-img-wrap img{max-width:90vw;max-height:88vh;border-radius:var(--radius);object-fit:contain;display:block}
+.lightbox-close{position:absolute;top:-44px;right:0;background:none;border:none;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1;padding:4px}
+.lightbox-close:hover{color:var(--aqua)}
+.lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;font-size:1.8rem;width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lightbox-prev:hover,.lightbox-next:hover{background:rgba(255,255,255,.25)}
+.lightbox-prev{left:-70px}
+.lightbox-next{right:-70px}
+@media(max-width:640px){.lightbox-prev{left:-44px}.lightbox-next{right:-44px}.lightbox-prev,.lightbox-next{width:38px;height:38px;font-size:1.4rem}}
+.gallery-cta{background:linear-gradient(135deg,var(--aqua),var(--aqua-deep));padding:64px 0;text-align:center;color:#fff}
+.gallery-cta h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
+.gallery-cta p{opacity:.85;margin-bottom:28px;font-size:1rem}
+@media(max-width:640px){
+  .gallery-item.tall{grid-row:span 1}
+  .gallery-item.wide{grid-column:span 1}
+  .gallery-cta{padding:46px 0}
+}
+@media(max-width:480px){
+  .gallery-cta{padding:38px 0}
+  .lightbox-img-wrap img{max-width:95vw;max-height:80vh}
+}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">ICELY + FRIENDS</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-frost">Freezing the flavor...</div>
+</div>
+
+<!-- Nav -->
+<nav class="nav solid" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends Logo">
+      <span>Icely + Friends</span>
+    </a>
+    <div class="nav-links">
+      <a href="flavors.html">Flavors</a>
+      <a href="about.html">Our Story</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html" class="nav-cta">Book Us</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMenu">&times;</button>
+  <a href="flavors.html" class="mobile-link">Flavors</a>
+  <a href="about.html" class="mobile-link">Our Story</a>
+  <a href="events.html" class="mobile-link">Events</a>
+  <a href="gallery.html" class="mobile-link">Gallery</a>
+  <a href="contact.html" class="mobile-link nav-cta" style="margin-top:10px">Book Us</a>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-clouds"></div>
+  <div class="page-hero-content">
+    <h1>Frozen Moments. <span class="accent">Real Joy.</span></h1>
+    <p>Every photo tells a story — see the smiles, the celebrations, and the community we're proud to serve.</p>
+  </div>
+  <div class="page-hero-waves">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C320,80 760,0 1100,50 C1280,68 1390,35 1440,40 L1440,80 L0,80Z" fill="var(--coconut)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Gallery -->
+<section class="gallery-page section-pad">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">&#127774; Our Events</div>
+      <h2>See Us at <span class="accent">Work &amp; Play</span></h2>
+      <p>From birthday parties to school fundraisers — here's a look at some of the moments we treasure most.</p>
+    </div>
+    <div class="gallery-masonry" id="galleryGrid">
+      <div class="gallery-item tall reveal" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/b93adec9-0fd5-4d54-a0fe-e8e5580027ea.jpg" data-caption="Icely + Friends Events">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/b93adec9-0fd5-4d54-a0fe-e8e5580027ea.jpg" alt="Icely + Friends at a community event" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Community Event</span></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.05s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/01.jpg" data-caption="Serving the community">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/01.jpg" alt="Serving the community" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Serving Smiles</span></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.08s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/02.jpg" data-caption="Happy customers">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/02.jpg" alt="Happy customers" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Happy Customers</span></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.11s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/03.jpg" data-caption="Event setup">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/03.jpg" alt="Event setup" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Event Setup</span></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.14s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/04.jpg" data-caption="Fun in the sun">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/04.jpg" alt="Fun in the sun" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Fun in the Sun</span></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.17s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/05.jpg" data-caption="The crowd loves us">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/05.jpg" alt="Crowd at event" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">The Crowd Loves It</span></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.2s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/06.jpg" data-caption="Community love">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/06.jpg" alt="Community love" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Community Love</span></div>
+      </div>
+      <div class="gallery-item wide reveal" style="transition-delay:.23s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/inner_ice_creams_11-1.jpg" data-caption="Frozen treats ready to serve">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/inner_ice_creams_11-1.jpg" alt="Frozen treats ready to serve" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Ready to Serve</span></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.26s" data-src="https://icelyandfriends.com/wp-content/uploads/2024/02/inner_ice_creams_12.jpg" data-caption="Our signature products">
+        <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/inner_ice_creams_12.jpg" alt="Our signature products" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Signature Products</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="gallery-cta">
+  <div class="container">
+    <div class="section-tag" style="color:rgba(255,255,255,.7)">&#128197; Ready to book?</div>
+    <h2>Want Us at Your <span style="color:var(--lemon)">Next Event?</span></h2>
+    <p>Let's create unforgettable frozen moments together. Get in touch to check availability.</p>
+    <a href="contact.html" class="btn" style="background:white;color:var(--aqua-deep);font-weight:700;font-size:1rem;padding:15px 36px">Book Us Now &#8594;</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:8px">
+          <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends" style="height:50px">
+          <span style="font-size:1.4rem">Icely + Friends</span>
+        </a>
+        <p>Handcrafted water ice, lemon smashers &amp; frozen treats made with real fruit in Hampton Roads, Virginia.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61555820357917" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12.073h2.54V9.8c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.887h-2.33V21.95C20.343 21.201 24 17.064 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://x.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flavors.html">Flavors</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Book Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul class="footer-links">
+          <li><a href="flavors.html">Water Ice</a></li>
+          <li><a href="flavors.html">Lemon Smashers</a></li>
+          <li><a href="flavors.html">Hot Cocoa</a></li>
+          <li><a href="events.html">Fundraising</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@icelyandfriends.com">info@icelyandfriends.com</a></li>
+          <li><a href="tel:+14702746456">470-274-6456</a></li>
+          <li>Hampton Roads, VA</li>
+          <li>Mon-Fri: 8AM-6PM</li>
+          <li>Sat-Sun: 9AM-8PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Icely + Friends. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <div class="lightbox-img-wrap">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8592;</button>
+    <img src="" alt="" id="lightboxImg">
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&#8594;</button>
+  </div>
+</div>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="contact.html">&#10052; Book Icely + Friends Now</a>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+<!-- Structured Data: ImageGallery -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Icely + Friends Event Gallery",
+  "description": "Photos from Icely + Friends events across Hampton Roads, VA",
+  "url": "https://icelyandfriends.com/gallery",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Icely + Friends"
+  }
+}
+</script>
+
+<script>
+(function(){
+  window.addEventListener('load',function(){ setTimeout(function(){ document.getElementById('loader').classList.add('hidden'); },2200); });
+  document.getElementById('hamburgerBtn').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.add('open'); });
+  document.getElementById('closeMenu').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.remove('open'); });
+  function reveal(){ document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*.88) el.classList.add('active'); }); }
+  window.addEventListener('scroll',reveal,{passive:true}); reveal();
+  var sc=document.getElementById('stickyCta'); sc.style.transform='translateY(100%)'; sc.style.transition='transform .3s';
+  window.addEventListener('scroll',function(){ sc.style.transform=window.pageYOffset>300?'translateY(0)':'translateY(100%)'; },{passive:true});
+  var btt=document.getElementById('backToTop');
+  window.addEventListener('scroll',function(){ if(window.pageYOffset>500) btt.classList.add('visible'); else btt.classList.remove('visible'); },{passive:true});
+  btt.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+  // Lightbox
+  var items=Array.from(document.querySelectorAll('.gallery-item[data-src]'));
+  var lb=document.getElementById('lightbox');
+  var lbImg=document.getElementById('lightboxImg');
+  var curIdx=0;
+  function openLb(idx){
+    curIdx=idx;
+    lbImg.src=items[idx].dataset.src;
+    lbImg.alt=items[idx].dataset.caption||'Gallery image';
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; lbImg.src=''; }
+  items.forEach(function(item,i){ item.addEventListener('click',function(){ openLb(i); }); });
+  document.getElementById('lightboxClose').addEventListener('click',closeLb);
+  document.getElementById('lightboxPrev').addEventListener('click',function(){ openLb((curIdx-1+items.length)%items.length); });
+  document.getElementById('lightboxNext').addEventListener('click',function(){ openLb((curIdx+1)%items.length); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') closeLb();
+    if(e.key==='ArrowLeft') document.getElementById('lightboxPrev').click();
+    if(e.key==='ArrowRight') document.getElementById('lightboxNext').click();
+  });
+
+  if(typeof gsap!=='undefined'){ gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.gallery-item').forEach(function(c,i){ gsap.from(c,{scale:.92,opacity:0,duration:.6,delay:i*.05,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 90%'}}); });
+  }
+})();
+</script>
+</body>
+</html>

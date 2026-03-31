@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events & Catering | Icely + Friends — Hampton Roads, VA</title>
+<meta name="description" content="Book Icely + Friends for birthdays, school fundraisers, corporate events, community gatherings & more in Hampton Roads, VA. Full cart setup, 8+ flavors, and $3.50 fundraising tickets.">
+<meta name="keywords" content="water ice catering, event catering Hampton Roads, birthday party dessert, school fundraiser, corporate event treats, community event, Virginia Beach catering">
+<meta name="author" content="Icely + Friends">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://icelyandfriends.com/events">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Events & Catering | Icely + Friends">
+<meta property="og:description" content="Birthdays, school fundraisers, corporate events & more — we bring the frozen fun to Hampton Roads, VA.">
+<meta property="og:image" content="https://icelyandfriends.com/wp-content/uploads/2024/02/b93adec9-0fd5-4d54-a0fe-e8e5580027ea.jpg">
+<meta property="og:url" content="https://icelyandfriends.com/events">
+<meta property="og:site_name" content="Icely + Friends">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Events & Catering | Icely + Friends">
+<meta name="twitter:description" content="Book water ice catering for your next event in Hampton Roads, VA.">
+<meta name="twitter:image" content="https://icelyandfriends.com/wp-content/uploads/2024/02/b93adec9-0fd5-4d54-a0fe-e8e5580027ea.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="apple-touch-icon" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+.events-grid-full{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.event-card-full{background:white;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 6px 30px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.event-card-full:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(0,0,0,.14)}
+.event-card-top{padding:36px 32px 24px;position:relative;overflow:hidden}
+.event-card-top::before{content:'';position:absolute;inset:0;opacity:.08}
+.event-card-icon{font-size:3.2rem;display:block;margin-bottom:14px}
+.event-card-full h3{font-size:1.4rem;color:var(--dark);margin-bottom:10px}
+.event-card-full p{color:#555;line-height:1.75;font-size:.95rem;flex:1}
+.event-card-bottom{padding:18px 32px 28px;background:var(--coconut)}
+.event-card-bottom ul{list-style:none;padding:0;margin:0}
+.event-card-bottom ul li{font-size:.87rem;color:#666;padding:4px 0;display:flex;align-items:center;gap:8px}
+.event-card-bottom ul li::before{content:'✓';color:var(--aqua-deep);font-weight:700;flex-shrink:0}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:48px}
+.blog-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.07);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.12)}
+.blog-card-img{width:100%;height:200px;object-fit:cover;background:linear-gradient(135deg,var(--aqua) 0%,var(--aqua-deep) 100%);display:flex;align-items:center;justify-content:center;font-size:4rem}
+.blog-card-body{padding:28px 28px 22px;flex:1;display:flex;flex-direction:column}
+.blog-card-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.blog-card-date{font-size:.78rem;color:#999;font-weight:500}
+.blog-card-tag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--aqua-light,#e0f7f7);color:var(--aqua-deep);padding:3px 10px;border-radius:40px}
+.blog-card-body h3{font-size:1.15rem;color:var(--dark);margin-bottom:10px;line-height:1.4}
+.blog-card-body p{font-size:.9rem;color:#666;line-height:1.7;flex:1}
+.blog-card-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:.85rem;font-weight:700;color:var(--aqua-deep);text-decoration:none}
+.blog-card-link:hover{gap:10px}
+.catering-process{background:var(--coconut);padding:80px 0}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;margin-top:48px;position:relative}
+.process-step{text-align:center;position:relative}
+.step-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--aqua),var(--aqua-deep));color:#fff;font-family:var(--font-display);font-size:1.5rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step-arrow{position:absolute;right:-14px;top:16px;color:var(--aqua);font-size:1.4rem;display:none}
+@media(min-width:640px){.step-arrow{display:block}}
+.process-step:last-child .step-arrow{display:none}
+.process-step h4{font-size:1rem;color:var(--dark);margin-bottom:8px}
+.process-step p{font-size:.88rem;color:#666;line-height:1.6}
+@media(max-width:768px){
+  .blog-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .events-grid-full{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+}
+@media(max-width:640px){
+  .events-grid-full{grid-template-columns:1fr}
+  .event-card-full h3{font-size:1.15rem}
+  .event-card-top{padding:28px 24px 20px}
+  .event-card-bottom{padding:14px 24px 22px}
+  .blog-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .catering-process{padding:60px 0}
+}
+@media(max-width:480px){
+  .process-steps{grid-template-columns:1fr}
+  .blog-card-img{height:160px}
+  .event-card-top,.event-card-bottom{padding-left:18px;padding-right:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">ICELY + FRIENDS</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-frost">Freezing the flavor...</div>
+</div>
+
+<!-- Nav -->
+<nav class="nav solid" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends Logo">
+      <span>Icely + Friends</span>
+    </a>
+    <div class="nav-links">
+      <a href="flavors.html">Flavors</a>
+      <a href="about.html">Our Story</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="nav-cta">Book Us</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMenu">&times;</button>
+  <a href="flavors.html" class="mobile-link">Flavors</a>
+  <a href="about.html" class="mobile-link">Our Story</a>
+  <a href="events.html" class="mobile-link">Events</a>
+  <a href="gallery.html" class="mobile-link">Gallery</a>
+  <a href="contact.html" class="mobile-link nav-cta" style="margin-top:10px">Book Us</a>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-clouds"></div>
+  <div class="page-hero-content">
+    <h1>We Bring the <span class="accent">Chill</span> to Your Celebration.</h1>
+    <p>From intimate birthday gatherings to large school fundraisers — let us make your next event unforgettable.</p>
+  </div>
+  <div class="page-hero-waves">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C320,80 760,0 1100,50 C1280,68 1390,35 1440,40 L1440,80 L0,80Z" fill="var(--coconut)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Events Grid -->
+<section class="section-pad" style="background:var(--coconut)">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">&#128197; What We Cater</div>
+      <h2>Every Occasion Deserves <span class="accent">Ice Cold Fun</span></h2>
+      <p>We bring the water ice cart to you — fully set up, served with a smile, and ready to delight every guest.</p>
+    </div>
+    <div class="events-grid-full">
+      <div class="event-card-full reveal" style="transition-delay:.0s">
+        <div class="event-card-top" style="background:linear-gradient(135deg,rgba(255,107,138,.06),rgba(255,159,67,.06))">
+          <span class="event-card-icon">&#127874;</span>
+          <h3>Birthday Parties</h3>
+          <p>Make birthdays extra special with a sweet frozen twist. From kids' parties to milestone celebrations, we set up, serve, and bring the joy. Every guest leaves with a smile.</p>
+        </div>
+        <div class="event-card-bottom">
+          <ul>
+            <li>Full cart setup included</li>
+            <li>Custom flavor selection</li>
+            <li>Minimum 24 cups per flavor</li>
+            <li>Available for indoor &amp; outdoor events</li>
+          </ul>
+        </div>
+      </div>
+      <div class="event-card-full reveal" style="transition-delay:.08s">
+        <div class="event-card-top" style="background:linear-gradient(135deg,rgba(255,221,87,.06),rgba(255,99,71,.06))">
+          <span class="event-card-icon">&#10052;</span>
+          <h3>Holiday Events</h3>
+          <p>Whether it's a summer block party, Fourth of July celebration, or holiday gathering, our refreshing water ice brings cheer to every seasonal festivity.</p>
+        </div>
+        <div class="event-card-bottom">
+          <ul>
+            <li>Seasonal flavor specials available</li>
+            <li>Hot cocoa for winter events</li>
+            <li>Themed servingware options</li>
+            <li>Great for neighborhood parties</li>
+          </ul>
+        </div>
+      </div>
+      <div class="event-card-full reveal" style="transition-delay:.16s">
+        <div class="event-card-top" style="background:linear-gradient(135deg,rgba(0,206,209,.06),rgba(76,175,80,.06))">
+          <span class="event-card-icon">&#127963;</span>
+          <h3>School Events</h3>
+          <p>Students love it and parents approve — our water ice is a healthy, refreshing treat that fits perfectly into school culture days, carnivals, field days, and end-of-year celebrations.</p>
+        </div>
+        <div class="event-card-bottom">
+          <ul>
+            <li>Pre-portioned cups for easy serving</li>
+            <li>Allergen-friendly options available</li>
+            <li>Perfect for field days &amp; carnivals</li>
+            <li>Budget-friendly school pricing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="event-card-full reveal" style="transition-delay:.0s">
+        <div class="event-card-top" style="background:linear-gradient(135deg,rgba(129,67,255,.06),rgba(255,107,138,.06))">
+          <span class="event-card-icon">&#129309;</span>
+          <h3>Community Events</h3>
+          <p>Block parties, neighborhood cookouts, church fairs — we love connecting with the Hampton Roads community. Let us bring the frozen fun to your next gathering.</p>
+        </div>
+        <div class="event-card-bottom">
+          <ul>
+            <li>Large-event capacity</li>
+            <li>Multiple flavor options</li>
+            <li>Community discount available</li>
+            <li>Flexible setup locations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="event-card-full reveal" style="transition-delay:.08s">
+        <div class="event-card-top" style="background:linear-gradient(135deg,rgba(0,151,167,.06),rgba(0,206,209,.06))">
+          <span class="event-card-icon">&#127970;</span>
+          <h3>Corporate Events</h3>
+          <p>Employee appreciation days, client events, office parties — show your team some love with a premium frozen treat experience that stands out from the usual catering.</p>
+        </div>
+        <div class="event-card-bottom">
+          <ul>
+            <li>Professional service &amp; presentation</li>
+            <li>Branded &amp; custom options available</li>
+            <li>Great for team morale events</li>
+            <li>Invoice &amp; billing available</li>
+          </ul>
+        </div>
+      </div>
+      <div class="event-card-full reveal" style="transition-delay:.16s">
+        <div class="event-card-top" style="background:linear-gradient(135deg,rgba(255,159,67,.06),rgba(255,221,87,.06))">
+          <span class="event-card-icon">&#128200;</span>
+          <h3>Fundraising</h3>
+          <p>Looking for a unique way to raise funds for your organization? Our fundraising program lets communities earn money while enjoying delicious frozen treats — everybody wins.</p>
+        </div>
+        <div class="event-card-bottom">
+          <ul>
+            <li>Real earning potential per ticket</li>
+            <li>Easy to run &amp; manage</li>
+            <li>Perfect for schools &amp; nonprofits</li>
+            <li>Flexible program options</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Previous Events Blog -->
+<section class="section-pad" style="background:white">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">&#128248; From the Community</div>
+      <h2>Previous <span class="accent">Events</span></h2>
+      <p>Relive the sweet moments — a look back at some of our favorite gatherings.</p>
+    </div>
+    <div class="blog-grid">
+
+      <!-- Blog Card 1 -->
+      <article class="blog-card reveal" style="transition-delay:.0s">
+        <div class="blog-card-img">&#127870;</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">July 4, 2025</span>
+            <span class="blog-card-tag">Community</span>
+          </div>
+          <h3>Independence Day Block Party — Chesapeake</h3>
+          <p>We rolled out the cart for a neighborhood block party in Chesapeake and served over 200 cups of Mango Chili, Blue Raspberry, and Strawberry Cheesecake water ice to a crowd of happy families.</p>
+          <a href="contact.html" class="blog-card-link">Book a similar event &#8594;</a>
+        </div>
+      </article>
+
+      <!-- Blog Card 2 -->
+      <article class="blog-card reveal" style="transition-delay:.1s">
+        <div class="blog-card-img">&#127891;</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">May 17, 2025</span>
+            <span class="blog-card-tag">School Event</span>
+          </div>
+          <h3>Spring Field Day at Norview Elementary</h3>
+          <p>Students celebrated the end of the school year with a full cart setup featuring 6 rotating flavors. Teachers and parents got in on the fun too — over 300 cups served by lunchtime.</p>
+          <a href="contact.html" class="blog-card-link">Book a school event &#8594;</a>
+        </div>
+      </article>
+
+      <!-- Blog Card 3 -->
+      <article class="blog-card reveal" style="transition-delay:.2s">
+        <div class="blog-card-img">&#127882;</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">October 12, 2024</span>
+            <span class="blog-card-tag">Birthday</span>
+          </div>
+          <h3>Sophia's Sweet 16 — Virginia Beach</h3>
+          <p>A pink-and-gold backyard bash called for Strawberry Cheesecake and Coconut water ice. The birthday crew loved the custom signage and the cart was a total hit with guests of all ages.</p>
+          <a href="contact.html" class="blog-card-link">Plan your party &#8594;</a>
+        </div>
+      </article>
+
+      <!-- Blog Card 4 -->
+      <article class="blog-card reveal" style="transition-delay:.3s">
+        <div class="blog-card-img">&#128188;</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">September 5, 2024</span>
+            <span class="blog-card-tag">Corporate</span>
+          </div>
+          <h3>Employee Appreciation Day — Norfolk</h3>
+          <p>A local company treated their team to an afternoon cool-down with 8 flavors on tap. We set up outside their office and served the whole staff in under two hours — smooth, sweet, and stress-free.</p>
+          <a href="contact.html" class="blog-card-link">Book a corporate event &#8594;</a>
+        </div>
+      </article>
+
+      <!-- Blog Card 5 -->
+      <article class="blog-card reveal" style="transition-delay:.4s">
+        <div class="blog-card-img">&#9981;</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">June 28, 2024</span>
+            <span class="blog-card-tag">Church Event</span>
+          </div>
+          <h3>Summer Revival Night — Portsmouth</h3>
+          <p>After an uplifting evening service, the congregation gathered outside for fellowship and fresh water ice. We served Lemon, Watermelon, and Passion Fruit to a crowd of 150+ members and their families.</p>
+          <a href="contact.html" class="blog-card-link">Host a church event &#8594;</a>
+        </div>
+      </article>
+
+      <!-- Blog Card 6 -->
+      <article class="blog-card reveal" style="transition-delay:.5s">
+        <div class="blog-card-img">&#127937;</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-date">August 19, 2023</span>
+            <span class="blog-card-tag">Festival</span>
+          </div>
+          <h3>Back-to-School Bash — Hampton</h3>
+          <p>Kids kicked off the new school year right with a free community event featuring games, music, and — of course — Icely + Friends. We went through 400+ cups of water ice before sunset.</p>
+          <a href="contact.html" class="blog-card-link">Join our next event &#8594;</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Booking Process -->
+<section class="catering-process">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">&#128222; How It Works</div>
+      <h2>Booking Is <span class="accent">Simple</span></h2>
+      <p>From inquiry to frozen fun in just a few easy steps.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal" style="transition-delay:.0s">
+        <div class="step-num">1</div>
+        <div class="step-arrow">&#8594;</div>
+        <h4>Reach Out</h4>
+        <p>Fill out our contact form or give us a call to check date availability.</p>
+      </div>
+      <div class="process-step reveal" style="transition-delay:.1s">
+        <div class="step-num">2</div>
+        <div class="step-arrow">&#8594;</div>
+        <h4>Choose Flavors</h4>
+        <p>Pick from our menu of 8+ flavors — 24 cup minimum per flavor ordered.</p>
+      </div>
+      <div class="process-step reveal" style="transition-delay:.2s">
+        <div class="step-num">3</div>
+        <div class="step-arrow">&#8594;</div>
+        <h4>Confirm &amp; Book</h4>
+        <p>We confirm your date, discuss setup requirements, and lock in your event.</p>
+      </div>
+      <div class="process-step reveal" style="transition-delay:.3s">
+        <div class="step-num">4</div>
+        <h4>We Show Up!</h4>
+        <p>We arrive, set up, and bring the frozen fun directly to your guests.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="contact.html" class="btn btn-primary" style="font-size:1.05rem;padding:16px 40px">Book Your Event &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:8px">
+          <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends" style="height:50px">
+          <span style="font-size:1.4rem">Icely + Friends</span>
+        </a>
+        <p>Handcrafted water ice, lemon smashers &amp; frozen treats made with real fruit in Hampton Roads, Virginia.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61555820357917" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12.073h2.54V9.8c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.887h-2.33V21.95C20.343 21.201 24 17.064 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://x.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flavors.html">Flavors</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Book Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Events</h4>
+        <ul class="footer-links">
+          <li><a href="events.html">Birthday Parties</a></li>
+          <li><a href="events.html">School Events</a></li>
+          <li><a href="events.html">Corporate</a></li>
+          <li><a href="events.html">Fundraising</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@icelyandfriends.com">info@icelyandfriends.com</a></li>
+          <li><a href="tel:+14702746456">470-274-6456</a></li>
+          <li>Hampton Roads, VA</li>
+          <li>Mon-Fri: 8AM-6PM</li>
+          <li>Sat-Sun: 9AM-8PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Icely + Friends. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="contact.html">&#10052; Book Icely + Friends Now</a>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+<!-- Structured Data: Event Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Food Catering",
+  "name": "Icely + Friends Event Catering",
+  "description": "Water ice and frozen treat catering for birthdays, schools, corporate events, and fundraisers in Hampton Roads, VA.",
+  "provider": {
+    "@type": "FoodEstablishment",
+    "name": "Icely + Friends",
+    "telephone": "+1-470-274-6456",
+    "email": "info@icelyandfriends.com",
+    "url": "https://icelyandfriends.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Hampton Roads, Virginia"
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Fundraising Tickets",
+    "price": "3.50",
+    "priceCurrency": "USD",
+    "description": "Fundraising ticket program for schools and organizations"
+  }
+}
+</script>
+
+<script>
+(function(){
+  window.addEventListener('load',function(){ setTimeout(function(){ document.getElementById('loader').classList.add('hidden'); },2200); });
+  document.getElementById('hamburgerBtn').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.add('open'); });
+  document.getElementById('closeMenu').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.remove('open'); });
+  function reveal(){ document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*.88) el.classList.add('active'); }); }
+  window.addEventListener('scroll',reveal,{passive:true}); reveal();
+  var sc=document.getElementById('stickyCta'); sc.style.transform='translateY(100%)'; sc.style.transition='transform .3s';
+  window.addEventListener('scroll',function(){ sc.style.transform=window.pageYOffset>300?'translateY(0)':'translateY(100%)'; },{passive:true});
+  var btt=document.getElementById('backToTop');
+  window.addEventListener('scroll',function(){ if(window.pageYOffset>500) btt.classList.add('visible'); else btt.classList.remove('visible'); },{passive:true});
+  btt.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  if(typeof gsap!=='undefined'){ gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.event-card-full').forEach(function(c,i){ gsap.from(c,{y:50,opacity:0,duration:.65,delay:i*.07,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 88%'}}); });
+  }
+})();
+</script>
+</body>
+</html>

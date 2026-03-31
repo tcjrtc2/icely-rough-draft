@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Ice Flavors | Icely + Friends — Hampton Roads, VA</title>
+<meta name="description" content="Explore all Icely + Friends water ice flavors — Strawberry Lemonade, Mango Jubilee, Rainbow Paradise, Passion Fruit, Sour Apple, Very Cherry, Lemon Smasher & Hot Cocoa. Order for events in Hampton Roads, VA.">
+<meta name="keywords" content="water ice flavors, Italian ice, strawberry lemonade, mango, rainbow, passion fruit, sour apple, cherry, lemon smasher, sugar-free, Hampton Roads">
+<meta name="author" content="Icely + Friends">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://icelyandfriends.com/flavors">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Water Ice Flavors | Icely + Friends">
+<meta property="og:description" content="Explore 8+ handcrafted water ice flavors — from Strawberry Lemonade to Mango Jubilee. Made with real fruit in Hampton Roads, VA.">
+<meta property="og:image" content="https://icelyandfriends.com/wp-content/uploads/2026/03/resized_image_3.png">
+<meta property="og:url" content="https://icelyandfriends.com/flavors">
+<meta property="og:site_name" content="Icely + Friends">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Water Ice Flavors | Icely + Friends">
+<meta name="twitter:description" content="Explore 8+ handcrafted water ice flavors made with real fruit in Hampton Roads, VA.">
+<meta name="twitter:image" content="https://icelyandfriends.com/wp-content/uploads/2026/03/resized_image_3.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="apple-touch-icon" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+.flavors-page{background:linear-gradient(180deg,var(--coconut) 0%,#FFF0E6 60%,#E0F7FA 100%);position:relative;overflow:hidden}
+.flavors-page::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,159,67,.12),transparent 70%);border-radius:50%;pointer-events:none}
+.flavors-page::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(0,206,209,.1),transparent 70%);border-radius:50%;pointer-events:none}
+.flavor-category{margin-bottom:70px}
+.flavor-category-heading{display:flex;align-items:center;gap:16px;margin-bottom:36px;padding-bottom:16px;border-bottom:2px solid rgba(0,206,209,.15)}
+.flavor-category-heading h3{font-size:1.7rem;color:var(--dark)}
+.flavor-category-heading .cat-icon{font-size:2rem}
+.flavor-category-heading .cat-count{font-size:.85rem;font-weight:600;color:var(--aqua-deep);background:rgba(0,206,209,.1);padding:4px 12px;border-radius:99px}
+.catering-note{background:linear-gradient(135deg,rgba(0,206,209,.08),rgba(255,159,67,.08));border:1px solid rgba(0,206,209,.2);border-radius:var(--radius);padding:28px 32px;margin-top:60px;text-align:center}
+.catering-note h4{font-size:1.2rem;color:var(--dark);margin-bottom:8px}
+.catering-note p{color:#666;font-size:.95rem;line-height:1.6}
+.catering-note strong{color:var(--aqua-deep)}
+@media(max-width:640px){
+  .flavor-category-heading{flex-wrap:wrap;gap:10px}
+  .flavor-category-heading h3{font-size:1.3rem}
+  .flavor-category-heading .cat-icon{font-size:1.6rem}
+  .catering-note{padding:24px 20px}
+  .catering-note h4{font-size:1.05rem}
+  .flavor-category{margin-bottom:50px}
+}
+@media(max-width:480px){
+  .flavor-category-heading .cat-count{font-size:.75rem;padding:3px 10px}
+  .catering-note{padding:20px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">ICELY + FRIENDS</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-frost">Freezing the flavor...</div>
+</div>
+
+<!-- Nav -->
+<nav class="nav solid" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends Logo">
+      <span>Icely + Friends</span>
+    </a>
+    <div class="nav-links">
+      <a href="flavors.html" class="active">Flavors</a>
+      <a href="about.html">Our Story</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="nav-cta">Book Us</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMenu">&times;</button>
+  <a href="flavors.html" class="mobile-link">Flavors</a>
+  <a href="about.html" class="mobile-link">Our Story</a>
+  <a href="events.html" class="mobile-link">Events</a>
+  <a href="gallery.html" class="mobile-link">Gallery</a>
+  <a href="contact.html" class="mobile-link nav-cta" style="margin-top:10px">Book Us</a>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-clouds"></div>
+  <div class="page-hero-content">
+    <div>&#127848; Water Ice &amp; More</div>
+    <h1>Freeze the Moment. <span class="accent">Flavor</span> the Fun.</h1>
+    <p>Refreshing, bold, and bursting with personality — every flavor is a frozen adventure waiting to happen.</p>
+  </div>
+  <div class="page-hero-waves">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C320,80 760,0 1100,50 C1280,68 1390,35 1440,40 L1440,80 L0,80Z" fill="var(--coconut)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Flavors Content -->
+<section class="flavors-page section-pad">
+  <div class="container">
+
+    <!-- Water Ice -->
+    <div class="flavor-category">
+      <div class="flavor-category-heading reveal">
+        <span class="cat-icon">&#127848;</span>
+        <h3>Water Ice</h3>
+        <span class="cat-count">6 Flavors</span>
+      </div>
+      <div class="flavor-grid">
+        <div class="flavor-card reveal" style="transition-delay:.05s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(255,107,138,.4),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2026/03/resized_image_3.png" alt="Strawberry Lemonade" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Strawberry Lemonade</div>
+            <p class="flavor-desc">Juicy strawberry sweetness blended with a splash of citrusy lemonade — the perfect balance of smooth, tart, and refreshingly bold flavor.</p>
+            <span class="flavor-tag tag-classic">Fan Favorite</span>
+          </div>
+        </div>
+        <div class="flavor-card reveal" style="transition-delay:.1s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(255,159,67,.4),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2026/03/resized_image_2.png" alt="Passion Fruit" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Passion Fruit</div>
+            <p class="flavor-desc">Sweet, tangy, and irresistibly smooth — this tropical favorite blends bold passion fruit flavor into a refreshing frozen escape in every scoop.</p>
+            <span class="flavor-tag tag-tropical">Tropical</span>
+          </div>
+        </div>
+        <div class="flavor-card reveal" style="transition-delay:.15s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(0,206,209,.4),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2026/03/resized_image_1.png" alt="Rainbow Paradise" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Rainbow Paradise</div>
+            <p class="flavor-desc">A bold swirl of cherry, blueberry, and vanilla stacked into one vibrant frozen masterpiece — sweet, refreshing, and bursting with personality.</p>
+            <span class="flavor-tag tag-bold">Bold &amp; Colorful</span>
+          </div>
+        </div>
+        <div class="flavor-card reveal" style="transition-delay:.2s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(255,221,87,.4),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/mango.png" alt="Mango Jubilee" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Mango Jubilee</div>
+            <p class="flavor-desc">Smooth, vibrant, and bursting with juicy mango flavor — this frozen favorite delivers a sweet island escape in every refreshing scoop.</p>
+            <span class="flavor-tag tag-tropical">Island Vibes</span>
+          </div>
+        </div>
+        <div class="flavor-card reveal" style="transition-delay:.25s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(255,99,71,.4),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/cakes_07.png" alt="Very Cherry" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Very Cherry</div>
+            <p class="flavor-desc">Intense sweetness of succulent cherries, creating a classic flavor that's always a crowd-pleaser at every event.</p>
+            <span class="flavor-tag tag-classic">Classic</span>
+          </div>
+        </div>
+        <div class="flavor-card reveal" style="transition-delay:.3s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(76,175,80,.35),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/apple-water-ice.png" alt="Sour Apple" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Sour Apple</div>
+            <p class="flavor-desc">A tart, tangy burst of crisp green apple goodness — refreshingly sour and irresistibly smooth with every single bite.</p>
+            <span class="flavor-tag tag-fresh">Refreshing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lemon Smashers -->
+    <div class="flavor-category">
+      <div class="flavor-category-heading reveal">
+        <span class="cat-icon">&#127819;</span>
+        <h3>Lemon Smashers</h3>
+        <span class="cat-count">2 Varieties</span>
+      </div>
+      <div class="flavor-grid">
+        <div class="flavor-card reveal" style="transition-delay:.05s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(255,221,87,.5),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/smoothie_0a5-copy-2.png" alt="Classic Lemon Smasher" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Classic Lemon Smasher</div>
+            <p class="flavor-desc">The timeless and pure flavor of freshly squeezed lemons — a classic choice for those who appreciate the simplicity of perfect lemonade.</p>
+            <span class="flavor-tag tag-fresh">Freshly Squeezed</span>
+          </div>
+        </div>
+        <div class="flavor-card reveal" style="transition-delay:.1s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(255,221,87,.5),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/smoothie_06.png" alt="Sugar-Free Lemon Smasher" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Sugar-Free Lemon Smasher</div>
+            <p class="flavor-desc">Sweetened with monk fruit — anti-inflammatory, doesn't affect blood sugar, and reduces caloric intake without sacrificing taste. Guilt-free bliss.</p>
+            <span class="flavor-tag tag-fresh">Sugar-Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seasonal -->
+    <div class="flavor-category">
+      <div class="flavor-category-heading reveal">
+        <span class="cat-icon">&#9749;</span>
+        <h3>Seasonal Specials</h3>
+        <span class="cat-count">Limited</span>
+      </div>
+      <div class="flavor-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="flavor-card reveal" style="transition-delay:.05s">
+          <div class="flavor-card-glow" style="background:radial-gradient(circle,rgba(139,69,19,.3),transparent)"></div>
+          <div class="flavor-img-wrap">
+            <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/cho.png" alt="Hot Cocoa" loading="lazy">
+            <div class="flavor-mist"></div>
+          </div>
+          <div class="flavor-info">
+            <div class="flavor-name">Hot Cocoa</div>
+            <p class="flavor-desc">Rich, warm, and comforting — our hot chocolate brings the cozy vibes when the temperature drops. The perfect winter warmer.</p>
+            <span class="flavor-tag tag-bold">Winter Warmer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Catering note -->
+    <div class="catering-note reveal">
+      <h4>&#128197; Catering Orders</h4>
+      <p>Planning an event? <strong>24-cup minimum per flavor.</strong> Available flavors include Strawberry Lemonade, Lemonberry Fusion, Mango, Mango Jubilee, Cherry, Very Cherry, Lemon, Lemon Pop, Blueberry, Electric Blue, Rainbow, Rainbow Paradise, Apple, and Sour Apple.</p>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:20px;display:inline-flex">Book a Catering Event &#8594;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:8px">
+          <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends" style="height:50px">
+          <span style="font-size:1.4rem">Icely + Friends</span>
+        </a>
+        <p>Handcrafted water ice, lemon smashers &amp; frozen treats made with real fruit in Hampton Roads, Virginia.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61555820357917" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12.073h2.54V9.8c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.887h-2.33V21.95C20.343 21.201 24 17.064 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://x.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flavors.html">Flavors</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Book Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul class="footer-links">
+          <li><a href="flavors.html">Water Ice</a></li>
+          <li><a href="flavors.html">Lemon Smashers</a></li>
+          <li><a href="flavors.html">Hot Cocoa</a></li>
+          <li><a href="events.html">Fundraising</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@icelyandfriends.com">info@icelyandfriends.com</a></li>
+          <li><a href="tel:+14702746456">470-274-6456</a></li>
+          <li>Hampton Roads, VA</li>
+          <li>Mon-Fri: 8AM-6PM</li>
+          <li>Sat-Sun: 9AM-8PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Icely + Friends. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="contact.html">&#10052; Book Icely + Friends Now</a>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+<!-- Structured Data: Product Menu -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Icely + Friends Flavor Menu",
+  "description": "Handcrafted water ice and lemon smashers made with real fruit",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Water Ice",
+      "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Strawberry Lemonade", "description": "Juicy strawberry sweetness blended with citrusy lemonade"},
+        {"@type": "MenuItem", "name": "Passion Fruit", "description": "Sweet, tangy, and irresistibly smooth tropical flavor"},
+        {"@type": "MenuItem", "name": "Rainbow Paradise", "description": "Cherry, blueberry, and vanilla swirled into a vibrant masterpiece"},
+        {"@type": "MenuItem", "name": "Mango Jubilee", "description": "Smooth, vibrant mango flavor in a sweet island escape"},
+        {"@type": "MenuItem", "name": "Very Cherry", "description": "Classic cherry frozen treat, always a crowd-pleaser"},
+        {"@type": "MenuItem", "name": "Sour Apple", "description": "Tart, tangy burst of crisp green apple goodness"}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Lemon Smashers",
+      "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Classic Lemon Smasher", "description": "Freshly squeezed lemon flavor"},
+        {"@type": "MenuItem", "name": "Sugar-Free Lemon Smasher", "description": "Sweetened with monk fruit, zero sugar"}
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  window.addEventListener('load',function(){ setTimeout(function(){ document.getElementById('loader').classList.add('hidden'); },2200); });
+  document.getElementById('hamburgerBtn').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.add('open'); });
+  document.getElementById('closeMenu').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.remove('open'); });
+  function reveal(){ document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*.88) el.classList.add('active'); }); }
+  window.addEventListener('scroll',reveal,{passive:true}); reveal();
+  document.querySelectorAll('.flavor-card').forEach(function(c){
+    c.addEventListener('mousemove',function(e){ var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5; c.style.transform='translateY(-8px) perspective(800px) rotateY('+(x*6)+'deg) rotateX('+(-y*6)+'deg)'; });
+    c.addEventListener('mouseleave',function(){ c.style.transform=''; });
+  });
+  var sc=document.getElementById('stickyCta'); sc.style.transform='translateY(100%)'; sc.style.transition='transform .3s';
+  window.addEventListener('scroll',function(){ sc.style.transform=window.pageYOffset>300?'translateY(0)':'translateY(100%)'; },{passive:true});
+  var btt=document.getElementById('backToTop');
+  window.addEventListener('scroll',function(){ if(window.pageYOffset>500) btt.classList.add('visible'); else btt.classList.remove('visible'); },{passive:true});
+  btt.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  if(typeof gsap!=='undefined'){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.flavor-card').forEach(function(c,i){ gsap.from(c,{y:60,opacity:0,duration:.7,delay:i*.08,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 86%'}}); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Us | Icely + Friends — Water Ice Catering in Hampton Roads, VA</title>
+<meta name="description" content="Book Icely + Friends for your next event in Hampton Roads, VA. Fill out our booking form or call 470-274-6456. We cater birthdays, school events, corporate gatherings & fundraisers.">
+<meta name="keywords" content="book water ice, catering request, event booking, Hampton Roads catering, birthday party booking, school event catering, fundraiser, contact Icely">
+<meta name="author" content="Icely + Friends">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://icelyandfriends.com/contact">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book Us | Icely + Friends">
+<meta property="og:description" content="Ready for frozen fun? Book Icely + Friends for your next event. Call 470-274-6456 or fill out our form.">
+<meta property="og:image" content="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<meta property="og:url" content="https://icelyandfriends.com/contact">
+<meta property="og:site_name" content="Icely + Friends">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Book Us | Icely + Friends">
+<meta name="twitter:description" content="Book water ice catering for your next event in Hampton Roads, VA.">
+<meta name="twitter:image" content="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="apple-touch-icon" href="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<style>
+.contact-section{background:linear-gradient(180deg,var(--coconut) 0%,#E8F8F9 100%);position:relative;overflow:hidden}
+.contact-section::before{content:'';position:absolute;top:-160px;right:-160px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,206,209,.08),transparent 65%);border-radius:50%;pointer-events:none}
+.contact-section::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,159,67,.07),transparent 65%);border-radius:50%;pointer-events:none}
+.contact-split{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}
+@media(max-width:900px){.contact-split{grid-template-columns:1fr;gap:40px}}
+.contact-info-panel{position:sticky;top:120px}
+.contact-info-card{background:white;border-radius:var(--radius-lg);padding:36px;box-shadow:0 8px 40px rgba(0,0,0,.07);margin-bottom:24px}
+.contact-info-card h3{font-size:1.2rem;color:var(--dark);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px}
+.contact-detail:last-child{margin-bottom:0}
+.contact-detail-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--aqua),var(--aqua-deep));display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-detail-text strong{display:block;font-size:.85rem;color:#888;font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.contact-detail-text a,.contact-detail-text span{color:var(--dark);font-size:.95rem;text-decoration:none;font-weight:500}
+.contact-detail-text a:hover{color:var(--aqua-deep)}
+.service-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.service-chip{background:rgba(0,206,209,.08);border:1px solid rgba(0,206,209,.15);color:var(--aqua-deep);font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:99px}
+.booking-form-card{background:white;border-radius:var(--radius-lg);padding:44px;box-shadow:0 8px 40px rgba(0,0,0,.08)}
+.booking-form-card h2{font-size:1.8rem;margin-bottom:6px}
+.booking-form-card p.sub{color:#888;font-size:.93rem;margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.form-group{margin-bottom:18px;display:flex;flex-direction:column}
+.form-group label{font-size:.82rem;font-weight:600;color:#666;text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{border:2px solid #e8e8e8;border-radius:var(--radius-sm);padding:13px 16px;font-family:var(--font-body);font-size:.95rem;color:var(--dark);background:#FAFAFA;transition:border-color .2s,box-shadow .2s;outline:none;-webkit-appearance:none}
+.form-group select{cursor:pointer}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--aqua);box-shadow:0 0 0 3px rgba(0,206,209,.12);background:#fff}
+.form-group textarea{resize:vertical;min-height:130px;line-height:1.6}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#bbb}
+.form-submit{width:100%;padding:16px;font-size:1.05rem;font-weight:700;border-radius:var(--radius-sm);cursor:pointer;border:none;background:linear-gradient(135deg,var(--aqua),var(--aqua-deep));color:#fff;font-family:var(--font-display);letter-spacing:.02em;transition:transform .2s,box-shadow .2s;margin-top:6px}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,206,209,.4)}
+.form-submit:active{transform:translateY(0)}
+.form-success{display:none;background:linear-gradient(135deg,rgba(0,206,209,.1),rgba(76,175,80,.1));border:1px solid rgba(76,175,80,.25);border-radius:var(--radius);padding:28px;text-align:center;margin-top:20px}
+.form-success.visible{display:block}
+.form-success h4{color:#2e7d32;margin-bottom:8px;font-size:1.1rem}
+.form-success p{color:#555;font-size:.92rem}
+.hours-table{width:100%;border-collapse:collapse;margin-top:4px}
+.hours-table tr td{padding:4px 0;font-size:.88rem;color:#555}
+.hours-table tr td:last-child{text-align:right;font-weight:600;color:var(--dark)}
+.hours-table tr td:first-child{color:#888}
+@media(max-width:900px){
+  .contact-info-panel{position:static}
+  .booking-form-card{padding:32px 28px}
+  .contact-info-card{padding:28px 24px}
+}
+@media(max-width:640px){
+  .contact-info-card{padding:24px 18px}
+  .booking-form-card{padding:24px 16px}
+  .contact-detail-icon{width:34px;height:34px;font-size:.9rem}
+  .booking-form-card h2{font-size:1.45rem}
+}
+@media(max-width:480px){
+  .hours-table tr td{font-size:.82rem;padding:5px 0}
+  .service-chip{font-size:.75rem;padding:4px 10px}
+  .contact-detail-text a,.contact-detail-text span{font-size:.9rem}
+}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">ICELY + FRIENDS</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-frost">Freezing the flavor...</div>
+</div>
+
+<!-- Nav -->
+<nav class="nav solid" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends Logo">
+      <span>Icely + Friends</span>
+    </a>
+    <div class="nav-links">
+      <a href="flavors.html">Flavors</a>
+      <a href="about.html">Our Story</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="nav-cta active">Book Us</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMenu">&times;</button>
+  <a href="flavors.html" class="mobile-link">Flavors</a>
+  <a href="about.html" class="mobile-link">Our Story</a>
+  <a href="events.html" class="mobile-link">Events</a>
+  <a href="gallery.html" class="mobile-link">Gallery</a>
+  <a href="contact.html" class="mobile-link nav-cta" style="margin-top:10px">Book Us</a>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-clouds"></div>
+  <div class="page-hero-content">
+    <h1>Let's Make Your Event <span class="accent">Unforgettable.</span></h1>
+    <p>Ready to bring the frozen fun? Fill out the form below and we'll get back to you within one business day.</p>
+  </div>
+  <div class="page-hero-waves">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C320,80 760,0 1100,50 C1280,68 1390,35 1440,40 L1440,80 L0,80Z" fill="var(--coconut)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section class="contact-section section-pad">
+  <div class="container">
+    <div class="contact-split">
+
+      <!-- Info Panel -->
+      <div class="contact-info-panel reveal-left">
+        <div class="contact-info-card">
+          <h3>&#10052; Contact Us Directly</h3>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128222;</div>
+            <div class="contact-detail-text">
+              <strong>Phone</strong>
+              <a href="tel:+14702746456">470-274-6456</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128140;</div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <a href="mailto:info@icelyandfriends.com">info@icelyandfriends.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128205;</div>
+            <div class="contact-detail-text">
+              <strong>Service Area</strong>
+              <span>Hampton Roads, Virginia</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128101;</div>
+            <div class="contact-detail-text">
+              <strong>Social</strong>
+              <a href="https://www.facebook.com/profile.php?id=61555820357917" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12.073h2.54V9.8c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.887h-2.33V21.95C20.343 21.201 24 17.064 24 12.073z"/></svg></a>&nbsp;&nbsp;
+              <a href="https://www.instagram.com/icelyandfriends" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><defs><radialGradient id="ig-contact-grad" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#ig-contact-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>&nbsp;&nbsp;
+              <a href="https://x.com/icelyandfriends" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#000" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>&#128344; Business Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday – Sunday</td><td>9:00 AM – 8:00 PM</td></tr>
+          </table>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>&#127963; We Serve</h3>
+          <div class="service-chips">
+            <span class="service-chip">Virginia Beach</span>
+            <span class="service-chip">Norfolk</span>
+            <span class="service-chip">Chesapeake</span>
+            <span class="service-chip">Portsmouth</span>
+            <span class="service-chip">Suffolk</span>
+            <span class="service-chip">Hampton</span>
+            <span class="service-chip">Newport News</span>
+            <span class="service-chip">Williamsburg</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-form-card reveal-right">
+        <h2>Book Your <span class="accent">Event</span></h2>
+        <p class="sub">Fill out the form below and we'll reach out within one business day to confirm details.</p>
+
+        <form id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eventType">Event Type *</label>
+              <select id="eventType" name="eventType" required>
+                <option value="">Select event type...</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="school">School Event</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="community">Community / Block Party</option>
+                <option value="holiday">Holiday Event</option>
+                <option value="fundraising">Fundraising Event</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="eventDate">Preferred Date</label>
+              <input type="date" id="eventDate" name="eventDate">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guestCount">Estimated Guests</label>
+              <select id="guestCount" name="guestCount">
+                <option value="">Select range...</option>
+                <option value="under50">Under 50</option>
+                <option value="50-100">50 – 100</option>
+                <option value="100-200">100 – 200</option>
+                <option value="200-500">200 – 500</option>
+                <option value="500+">500+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Event City / Location</label>
+              <input type="text" id="location" name="location" placeholder="Virginia Beach, VA">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Event</label>
+            <textarea id="message" name="message" placeholder="Share any details — flavor preferences, theme, setup requirements, or questions..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">&#10052; Send Booking Request</button>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <h4>&#127881; Request Received!</h4>
+          <p>Thank you for reaching out! We'll review your details and get back to you within one business day. Can't wait to make your event sweet!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:8px">
+          <img src="https://icelyandfriends.com/wp-content/uploads/2024/02/shop-logo.png" alt="Icely + Friends" style="height:50px">
+          <span style="font-size:1.4rem">Icely + Friends</span>
+        </a>
+        <p>Handcrafted water ice, lemon smashers &amp; frozen treats made with real fruit in Hampton Roads, Virginia.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61555820357917" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12.073h2.54V9.8c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.887h-2.33V21.95C20.343 21.201 24 17.064 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://x.com/icelyandfriends" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="white" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flavors.html">Flavors</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Book Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Events</h4>
+        <ul class="footer-links">
+          <li><a href="events.html">Birthday Parties</a></li>
+          <li><a href="events.html">School Events</a></li>
+          <li><a href="events.html">Corporate</a></li>
+          <li><a href="events.html">Fundraising</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@icelyandfriends.com">info@icelyandfriends.com</a></li>
+          <li><a href="tel:+14702746456">470-274-6456</a></li>
+          <li>Hampton Roads, VA</li>
+          <li>Mon-Fri: 8AM-6PM</li>
+          <li>Sat-Sun: 9AM-8PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Icely + Friends. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+<!-- Structured Data: ContactPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Book Icely + Friends",
+  "description": "Book water ice catering for your next event in Hampton Roads, VA",
+  "url": "https://icelyandfriends.com/contact",
+  "mainEntity": {
+    "@type": "FoodEstablishment",
+    "name": "Icely + Friends",
+    "telephone": "+1-470-274-6456",
+    "email": "info@icelyandfriends.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hampton Roads",
+      "addressRegion": "VA",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+<script>
+(function(){
+  window.addEventListener('load',function(){ setTimeout(function(){ document.getElementById('loader').classList.add('hidden'); },2200); });
+  document.getElementById('hamburgerBtn').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.add('open'); });
+  document.getElementById('closeMenu').addEventListener('click',function(){ document.getElementById('mobileMenu').classList.remove('open'); });
+  function reveal(){ document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*.88) el.classList.add('active'); }); }
+  window.addEventListener('scroll',reveal,{passive:true}); reveal();
+
+  // Form submission — shows success message; wire up real backend as needed
+  document.getElementById('bookingForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var form=this;
+    var firstName=document.getElementById('firstName').value.trim();
+    var email=document.getElementById('email').value.trim();
+    var eventType=document.getElementById('eventType').value;
+    if(!firstName||!email||!eventType){ alert('Please fill in all required fields (Name, Email, and Event Type).'); return; }
+    // Basic email format check
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ alert('Please enter a valid email address.'); return; }
+    form.style.display='none';
+    document.getElementById('formSuccess').classList.add('visible');
+  });
+
+  if(typeof gsap!=='undefined'){ gsap.registerPlugin(window.ScrollTrigger||{}); }
+
+  var btt=document.getElementById('backToTop');
+  window.addEventListener('scroll',function(){ if(window.pageYOffset>500) btt.classList.add('visible'); else btt.classList.remove('visible'); },{passive:true});
+  btt.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
